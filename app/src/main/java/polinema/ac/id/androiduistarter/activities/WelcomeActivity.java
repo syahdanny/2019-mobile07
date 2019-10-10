@@ -18,7 +18,6 @@ import android.widget.TextView;
 import polinema.ac.id.androiduistarter.R;
 
 public class WelcomeActivity extends AppCompatActivity {
-
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
@@ -35,7 +34,6 @@ public class WelcomeActivity extends AppCompatActivity {
         dotsLayout = findViewById(R.id.layoutDots);
         btnSkip = findViewById(R.id.btn_skip);
         btnNext = findViewById(R.id.btn_next);
-        //variabel untuk menampung layout yang akan di viewpager kan
         layouts = new int[]{
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
@@ -100,6 +98,7 @@ public class WelcomeActivity extends AppCompatActivity {
         finish();
     }
 
+    //  viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
@@ -165,4 +164,5 @@ public class WelcomeActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
+
 }
